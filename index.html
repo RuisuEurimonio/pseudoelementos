@@ -12,12 +12,30 @@
 <body>
     
     <div class="container-flex">
-        <div class="row">
-            <div class="col-2 box">
-                <p class="selection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla consequatur incidunt repellat unde at adipisci nemo. Fuga ad vitae recusandae assumenda eveniet dolorum sapiente ab iusto magni, voluptas repellat ipsum laboriosam et quidem quam! Dignissimos ducimus vitae tenetur qui molestiae eius repudiandae, doloremque odit repellendus, voluptatibus quo enim eveniet.</p>
-                <div class="backdrop_container">
-                    <p class="backdrop">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla consequatur incidunt repellat unde at adipisci nemo. Fuga ad vitae recusandae assumenda eveniet dolorum sapiente ab iusto magni, voluptas repellat ipsum laboriosam et quidem quam! Dignissimos ducimus vitae tenetur qui molestiae eius repudiandae, doloremque odit repellendus, voluptatibus quo enim eveniet.</p>
+        <div class="row justify-content-center p-3">
+            <div class="col-12 col-sm-5 col-md-3 box">
+                <h2> Selection:</h2>
+                <p class="selection"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla consequatur incidunt repellat unde at adipisci nemo. Fuga ad vitae recusandae assumenda eveniet dolorum sapiente ab iusto magni, voluptas repellat ipsum laboriosam et quidem quam! Dignissimos ducimus vitae tenetur qui molestiae eius repudiandae, doloremque odit repellendus, voluptatibus quo enim eveniet.</p>
+                <div class="content">
+                    <h2>Backdrop: </h2>
+                    <p>Se usa para el fondo de elementos con mayor z-index</p>
+                    <button class="button" onclick="opendialog()">Click here</button> 
                 </div>
+                <dialog>
+                    <h2>Titulo</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="button" onclick="closedialog()"></button>
+                </dialog> 
+                <script>
+                    var dialog = document.querySelector('dialog');
+                    function opendialog() {
+                    dialog.showModal();
+                }
+                function closedialog() {
+                 dialog.close();
+                }
+                </script>
+                <h2> Marker: </h2>
                 <ul>
                     <li class="marker"></li>
                     <li class="marker"></li>
@@ -26,17 +44,23 @@
                     <li class="marker"></li>
                     <li class="marker"></li>
                 </ul>
+                <h2> Spelling error:</h2>
                 <p contenteditable spellcheck="true" class="speelling_error">Me van a pegar contra el teclasfdnsajfnsakjndisajmdpsamd auch.</p>
+                <h2> grammar error:</h2>
                 <p class="grammar_error">My friends is coming to the party tonight.</p>
             </div>
-            <div class="col-8 box">
-                <h1 class="title">Hola mundo.</h1>
+            <div class="col-12 col-sm-5 box">
+                <h2>First line y first letter:</h2>
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem perferendis soluta cum inventore. Aut, quas necessitatibus sint possimus quam voluptatem quaerat! Alias, necessitatibus repudiandae corporis facilis nulla voluptates? Ex, perspiciatis voluptatibus? Amet dicta ab quas repellat labore laudantium cupiditate possimus molestias quae a iure in omnis ducimus tempore perferendis, vitae autem fugit, eaque, quisquam harum obcaecati provident ratione! Natus possimus omnis distinctio, illo ea ut, adipisci explicabo nulla sed facilis, rerum dolores accusamus iste quo debitis repellat id? Hic, laudantium dolores sint officia magni, illo nostrum nemo, id aspernatur quis ab nobis voluptates quibusdam optio. Tempora nulla qui ea?</p>
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorem perferendis soluta cum inventore. Aut, quas necessitatibus sint possimus quam voluptatem quaerat! Alias, necessitatibus repudiandae corporis facilis nulla voluptates? Ex, perspiciatis voluptatibus? Amet dicta ab quas repellat labore laudantium cupiditate possimus molestias quae a iure in omnis ducimus tempore perferendis, vitae autem fugit, eaque, quisquam harum obcaecati provident ratione! Natus possimus omnis distinctio, illo ea ut, adipisci explicabo nulla sed facilis, rerum dolores accusamus iste quo debitis repellat id? Hic, laudantium dolores sint officia magni, illo nostrum nemo, id aspernatur quis ab nobis voluptates quibusdam optio. Tempora nulla qui ea?</p>
             </div>
-            <div class="col-2 box">
-                <div class="afterBefore"></div>
-                <input type="text" class="placeholder" placeholder="Placeholder">
+            <div class="col-12 col-sm-3 box">
+                <h2> Before </h2>
+                <p class="before"> Hola que tal</p>
+                <h2> After </h2>
+                <p class="after"> Hasta luego</p>
+                <h2> Placeholder </h2>
+                <input type="text" class="placeholder" placeholder="Hola que tal">
             </div>
         </div>
     </div>

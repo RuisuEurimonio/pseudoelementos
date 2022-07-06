@@ -4,7 +4,7 @@ div div.row{
 }
 
 .text::first-line{
-    color:white;
+    color:blueviolet;
     font-variant: small-caps;
 }
 
@@ -23,48 +23,14 @@ div div.row{
     font-size: 2rem;
 }
 
-.afterBefore{
-    position: relative;
-    width: 15rem;
-    height: 15rem;
-    margin-top: 5rem;
-    background-color: aqua;
-    border: .6rem solid skyblue;
-    border-radius: 50%;
-    overflow: hidden;
+.after::after{
+    content: ", ¿todo bien?";
+    color: red;
 }
 
-.afterBefore::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    padding: 0;
-    width: 50%;
-    height: 50%;
-    border: .6rem solid black;
-    border-radius: 50%;
-}
-
-.afterBefore::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: black;
-    animation: eye 3s infinite alternate;
-}
-
-@keyframes eye{
-    to{
-        top: -100%;
-    }
-    from{
-        top: 0;
-    }
+.before::before{
+    content: "Espero le vaya bien, ";
+    color: red;
 }
 
 .selection::selection{
@@ -72,12 +38,9 @@ div div.row{
     color: white;
 }
 
-.backdrop{
-    background-color: aqua;
-}
 
-.backdrop::backdrop{
-    background-color: darkorange;
+dialog::backdrop{
+    background-color: #000000aa;
 }
 
 .placeholder::placeholder{
